@@ -1,0 +1,78 @@
+/* footer.scss
+==========================================*/
+footer {
+  background-color: $tds-dk-gray;
+  text-align: center;
+  border-top: solid 4px $tds-dkr-gray;
+  padding: 0 0 36px 0;
+  .phone {
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 24px 16px;
+    a {
+      color: white;
+      font-weight: 500;
+      text-decoration: none;
+    }
+  }
+
+  .footer-links {
+    margin: 0 20px;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+
+    li {
+      display: inline;
+      font-family: $tds-font-body;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 0.75em;
+      line-height: 1.25em;
+      margin-right: -4px;
+
+      a {
+        display: inline-block;
+        padding: 4px 16px;
+        border-right: solid 1px $tds-headfoot-text-color;
+        color: $tds-headfoot-text-color;
+        &:hover, &:focus, &:active {
+          background-color: rgba(0,0,0,.25);color: white;
+        }
+      }
+    }
+    li:last-child a {
+      border-right: none;
+    }
+
+    @media (max-width:$screen-xxs) {
+        li {
+          display: block;
+          text-align: center;
+          &:first-child {
+            a {
+              border-top: solid 1px $tds-headfoot-text-color;
+            }
+          }
+
+          a {
+            display: block;
+            padding: 16px;
+            border-right: none;
+            border-bottom: solid 1px $tds-headfoot-text-color;
+          }
+        }
+    }
+  }
+
+  .copyright {
+    font-size: 0.75em;
+    line-height: 1.5em;
+    color: $tds-headfoot-text-color;
+    margin: 24px 16px 0 16px;
+  }
+}
+
+
+/* END footer.scss */

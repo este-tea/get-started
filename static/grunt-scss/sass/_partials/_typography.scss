@@ -1,0 +1,123 @@
+/* typography.scss
+==========================================*/
+body {
+  font-family: $tds-font-body;
+}
+// headings
+.h1,
+.h2,
+.h3,
+.h4,
+h1,
+h2,
+h3,
+h4,
+button {
+  font-family: $tds-font-family;
+  margin-bottom: 20px;
+}
+
+.h1,
+h1 {
+  font-size: 36px;
+  color: $tds-dk-blue;
+}
+
+.h2,
+h2 {
+  font-size: 28px;
+  color: $tds-dk-blue;
+}
+@media (max-width: 584px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+.h3,
+h3 {
+  font-size: 24px;
+  color: $tds-lt-blue;
+}
+
+.h4,
+h4 {
+  color: $tds-dk-blue;
+  margin-bottom: 20px;
+}
+
+.h5,
+h5 {
+  color: $tds-lt-blue;
+  margin-bottom: 20px;
+}
+
+.h6,
+h6 {
+  color: #000;
+  margin-bottom: 20px;
+}
+@media (max-width: 584px) {
+  h2 {
+    font-size: 21px;
+    margin-bottom: 8px;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+}
+// p or li or main body copy
+
+p {
+  line-height: 1.65em;
+  font-size: 14px;
+  margin: 0 0 10px;
+  color: $tds-dk-gray;
+}
+
+a {
+  color: $tds-lt-blue-100;
+  text-decoration: underline;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+  color: $tds-blue-100;
+}
+
+a strong {
+  color: inherit;
+}
+// Note messaging
+.tds-note {
+  font-size: 11px;
+  font-style: italic;
+}
+
+.tds-emphasize {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.is-emphasized {
+  font-size: 18px;
+  color: #0c8fd0;
+  margin-top: 12px;
+}
+/* END typography.scss */

@@ -1,0 +1,280 @@
+/* header.scss
+==========================================*/
+header {
+  div {
+    display: flex;
+  }
+}
+
+a#tds-logo {
+  width: 98px;
+  height: 40px;
+  display: inline-block;
+  margin: 24px 0;
+  background-image: url(../images/tds-logo.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media (max-width:540px) {
+    margin: 16px 0;
+  }
+}
+
+ul#header-contact-links {
+  margin: 24px 0;
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  @media (min-width:540px) {
+    margin-left: auto;
+  }
+  @media (max-width:$screen-md) {
+    margin-left: 20px;
+  }
+  @media (max-width:540px) {
+    display: none;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 .8em;
+    padding: 0;
+
+    a.contact-links-text {
+      display: flex;
+      text-decoration: none;
+      color: #555;
+      font-size: 14px;
+      line-height: 40px;
+      font-family: $tds-font-family;
+      &:before {
+        content: "";
+        width: 28px;
+        height: 28px;
+        display: block;
+        margin-right: .5em;
+        top: 6px;
+        position: relative;
+        background-color: $tds-lt-blue-80;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 12px;
+        border-radius: 50%;
+      }
+      &:hover, &:focus, &:active {
+        color: $tds-dk-blue;
+        &:before {
+          background-color: $tds-dk-blue;
+        }
+      }
+    }
+
+    a.contact-call-icon:before {
+      background-image: url(../images/icon_contact-call.svg)
+    }
+    a.contact-chat-icon:before {
+      background-image: url(../images/icon_contact-chat.svg)
+    }
+  }
+}
+
+.L0-nav {
+  border-bottom: solid 4px $tds-dk-blue;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+    font-family: $tds-font-family;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 40px;
+    color: $tds-dk-blue;
+    display: flex;
+    li {
+      display: inline-block;
+      &:hover, &:focus, &:active {
+        color: #fff;
+        background-color: $tds-lt-blue;
+        cursor: pointer;
+      }
+      &.active {
+        a {
+          color: #fff;
+          background-color: $tds-dk-blue;
+        }
+      }
+      a {
+        display: inline-block;
+        height: 40px;
+        padding: 0 16px;
+        color: $tds-dk-blue;
+        text-decoration: none;
+        &:hover, &:focus, &:active {
+          color: #fff;
+          background-color: $tds-lt-blue;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:$screen-md) {
+  .L0-nav {
+    background-color: $tds-dkr-gray;
+    border-bottom: none;
+    ul {
+      flex-direction: column;
+      width: 100%;
+      li {
+        display: block;
+        width: 100%;
+        &:hover, &:focus, &:active {
+          background-color: $tds-dk-gray;
+        }
+        &.active {
+          a {
+            color: $tds-white;
+            background-color: $tds-dkr-gray;
+            &:hover, &:focus, &:active {
+              background-color: $tds-dk-gray;
+            }
+          }
+        }
+        &:last-child {
+          border-bottom: solid 4px $tds-gray;
+          a {
+            border-bottom: none;
+          }
+        }
+        a {
+          color: $tds-white;
+          font-weight: 300;
+          display: block;
+          height: auto;
+          padding: 10px 0;
+          margin: 0 15px;
+          border-bottom: 2px solid $tds-lt-blue;
+          &:hover, &:focus, &:active {
+            color: $tds-white;
+            background-color: $tds-dk-gray;
+            cursor: pointer;
+            &:after {
+              content: "";
+              display: block;
+              position: absolute;
+              background: url('../images/ui/right-arrow-green.png');
+              width: 16px;
+              height: 16px;
+              background-size: contain;
+              background-repeat: no-repeat;
+              left: 90vw;
+              transform: translateY(-25px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#menuButton {
+  display: none;
+  &:hover, &:focus, &:active {
+    outline: dotted 1px $tds-lt-blue;
+    background: $tds-lt-blue;
+    border: solid 2px $tds-lt-blue;
+  }
+}
+@media (max-width:$screen-md) {
+  #menuButton {
+    border: solid 2px $tds-dk-blue;
+    background-color: $tds-dk-blue;
+    padding: 8px !important;
+    height: 36px;
+    display: inline-block !important;
+    margin-left: auto;
+    font-size: 12px;
+    text-decoration: none;
+    margin-top: 26px;
+    margin-right: 0;
+    border-radius: 0px;
+    color: $tds-white;
+  }
+  #menuButton.collapsed {
+    border: solid 2px $tds-gray;
+    background-color: transparent;
+    color: $tds-dk-gray;
+    &:hover, &:focus, &:active {
+      border: solid 2px $tds-dk-blue;
+      color: $tds-white !important;
+      background-color: $tds-dk-blue;
+    }
+  }
+}
+@media (max-width:540px) {
+  #menuButton {
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+}
+
+.tds-searchbar {
+  margin-left: auto;
+
+  .tds-search-container {
+    padding: 0;
+    position: relative;
+    border: 0;
+
+    .tds-searchbar-input {
+      -webkit-appearance: none;
+      -webkit-border-radius: 0;
+      border: 0 none;
+      outline: 0;
+      color: $tds-dk-gray;
+      background: $tds-lt-gray;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 40px;
+      height: 40px;
+      width: 280px;
+      margin-right: 44px;
+      padding: 0 14px;
+    }
+
+    .tds-searchbar-button {
+      -webkit-appearance: none;
+      -webkit-border-radius: 0;
+      border: 0 none;
+      background-color: $tds-dk-blue;
+      width: 44px;
+      float: left;
+      padding: 0;
+      text-align: center;
+      height: 44px;
+      cursor: pointer;
+      background-image: linear-gradient(transparent,transparent),url(../images/icon_search-white.svg);
+      background-size: 18px 18px;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 0;
+      top: 0;
+      text-indent: -9999em;
+    }
+  }
+}
+
+@media (max-width:$screen-md) {
+  .tds-width-container.header-nav {
+      padding: 0;
+      border-top: solid 2px #0c85d0;
+  }
+}
+/* END header.scss */

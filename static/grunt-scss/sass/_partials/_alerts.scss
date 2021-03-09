@@ -1,0 +1,168 @@
+/* alerts
+==========================================*/
+.tds-alert {
+  margin-bottom: 20px;
+  display: block;
+  text-align: left;
+  padding: 12px 16px;
+  width: 100%;
+  line-height: 24px;
+  font-family: $tds-font-family;
+  font-size: 14px;
+  font-weight: 400 !important;
+  color: #000;
+  border-radius: 0px;
+  border: 0px solid transparent;
+  p {
+    font-family: $tds-font-family;
+    margin-bottom: 0;
+    color: black;
+  }
+  p.h4 {
+      color: #000;
+      margin-top: 2px;
+  }
+  a {
+    color: #000;
+    text-decoration: underline;
+    padding: 0 8px;
+    &:hover, &:focus, &:active {
+      background: #555;
+      color: white;
+    }
+  }
+
+  // error items
+  ul {
+    display: block;
+    margin: 10px 10px 0 10px;
+    padding-left: 12px;
+    list-style-type: none;
+    li {
+      display: list-item;
+      color: #000!important;
+      line-height: 1.4em!important;
+      margin-bottom: 10px;
+      width: 100%;
+      &:before {
+        position: relative;
+        top: -3px;
+        margin-right: 12px;
+        margin-left: -20px;
+        font-size: 8px;
+        color: #000;
+        transform: translate(0,0);
+      }
+      &:last-child {
+        margin-bottom:0;
+      }
+    }
+  }
+}
+.userGreeting {
+  max-width: 1232px;
+  margin: 0 auto;
+  padding: 0 16px;
+  .tds-width-container {
+      padding: 0;
+  }
+  .tds-alert-greeting {
+      background-color: $tds-info-bg;
+      margin-top: 16px;
+      padding: 14px;
+  }
+}
+
+
+// red = error
+.tds-alert-error {
+  background-color: $tds-error-bg;
+  border-left: 3px solid $tds-error;
+  &.tds-top-border {
+    border-top: 3px solid $tds-error;
+    border-left: 0px ;
+  }
+}
+
+//red alert error icon
+.tds-alert.tds-alert-error {
+  background-image: url('/content/dam/tdstelecom/images/ui/alerts/icon_alert-error.svg');
+  background-size: 20px;
+  background-position: 16px 14px;
+  background-repeat: no-repeat;
+  padding-left: 52px;
+}
+
+// Yellow = warning
+.tds-alert-warning {
+  background-color: $tds-warning-bg;
+  border-left: 3px solid $tds-warning;
+  &.tds-top-border {
+    border-top: 3px solid $tds-warning;
+    border-left: 0px ;
+  }
+}
+
+//yellow alert warning icon
+.tds-alert.tds-alert-warning {
+    background-image: url('/content/dam/tdstelecom/images/ui/alerts/icon_alert-warning.svg');
+    background-size: 22px;
+    background-position: 16px 16px;
+    background-repeat: no-repeat;
+    padding-left: 52px;
+}
+
+// Green = success
+.tds-alert-success {
+  background-color: $tds-success-bg;
+  border-left: 3px solid $tds-green ;
+  &.tds-top-border {
+    border-top: 3px solid $tds-green ;
+    border-left: 0px ;
+  }
+}
+//green alert success icon
+.tds-alert.tds-alert-success {
+    background-image: url('/content/dam/tdstelecom/images/ui/alerts/icon_alert-success.svg');
+    background-size: 22px;
+    background-position: 16px 11px;
+    background-repeat: no-repeat;
+    padding-left: 52px;
+}
+
+// TDS Lt Blue info or loading
+.tds-alert-loading,
+.tds-alert-info,
+.tds-alert-status {
+    color: black;
+    background: $tds-status-bg;
+    border-left: solid 3px $tds-status;
+}
+
+//lt-blue alert informational icon
+.tds-alert.tds-alert-info,
+.tds-alert.tds-alert-status  {
+    background-image: url('/content/dam/tdstelecom/images/ui/alerts/icon_alert-information.svg');
+    background-size: 20px;
+    background-position: 16px 11px;
+    background-repeat: no-repeat;
+    padding-left: 52px;
+}
+
+.tds-alert.tds-alert-info,
+.tds-alert.tds-alert-status {
+    background-size: 20px;
+    background-position: 16px 14px;
+    padding-left: 52px;
+}
+
+//lt-blue alert loading icon
+.tds-alert.tds-alert-loading {
+  padding-left: 52px;
+  background-image: url('/content/dam/tdstelecom/images/ui/tds-spinner-icon.gif');
+  background-size: 22px;
+  background-position: 16px 11px;
+  background-repeat: no-repeat;
+}
+
+/* END alerts.scss */

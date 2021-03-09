@@ -1,0 +1,10 @@
+/* buttons-links.scss
+==========================================*/
+:focus {
+  outline: dotted 1px $tds-lt-blue;
+}
+
+:hover {
+  transition: all 0.2s ease-in-out;
+}
+/* END buttons-links.scss */
